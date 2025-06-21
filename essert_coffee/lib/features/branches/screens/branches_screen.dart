@@ -1,6 +1,7 @@
 import 'package:essert_coffee/features/branches/bloc/branch_bloc.dart';
 import 'package:essert_coffee/features/branches/widgets/branch_detail_widget.dart';
 import 'package:essert_coffee/models/branch_model.dart';
+import 'package:essert_coffee/style/style_text.dart';
 import 'package:essert_coffee/widgets/branch_widget.dart';
 import 'package:essert_coffee/style/style_color.dart';
 import 'package:essert_coffee/style/style_size.dart';
@@ -91,6 +92,15 @@ class BranchesScreen extends StatelessWidget {
                       // Show branch details when a marker is selected.
                       BlocBuilder<BranchBloc, BranchState>(
                         builder: (context, state) {
+                          if (state is ErrorState) {
+                            return Center(
+                              child: Text(
+                                state.message,
+                                style: StyleText.regular16Error,
+                                textAlign: TextAlign.center,
+                              ),
+                            );
+                          }
                           if (state is UpdateState) {
                             return Column(
                               children: branches.map((branch) {

@@ -80,7 +80,12 @@ class BranchBloc extends Bloc<BranchEvent, BranchState> {
           ) /
           1000;
       emit(SuccessState());
-
+      if (distanceToBranch1! > 30 && distanceToBranch2! > 30) {
+        emit(
+          ErrorState("Sorry, there is no branch near your current location."),
+        );
+        return;
+      }
       // Determine closest branch
       if (distanceToBranch1! <= distanceToBranch2!) {
         selectedMarkerId = '1';
