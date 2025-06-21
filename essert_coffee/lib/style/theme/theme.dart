@@ -7,7 +7,7 @@ class CustomTheme {
       brightness: Brightness.light,
       primary: StyleColor.beige,
       onPrimary: StyleColor.black,
-      secondary: StyleColor.tail,
+      secondary: StyleColor.teal,
       onSecondary: StyleColor.black,
       error: StyleColor.red,
       onError: StyleColor.red,
@@ -22,7 +22,7 @@ class CustomTheme {
         shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
-        backgroundColor: WidgetStateProperty.all(StyleColor.tail),
+        backgroundColor: WidgetStateProperty.all(StyleColor.teal),
         foregroundColor: WidgetStateProperty.all(StyleColor.black),
         overlayColor: WidgetStatePropertyAll(Colors.grey.shade600),
       ),
@@ -30,7 +30,7 @@ class CustomTheme {
     listTileTheme: ListTileThemeData(tileColor: Colors.transparent),
     appBarTheme: AppBarTheme(backgroundColor: Colors.transparent),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedItemColor: StyleColor.tail,
+      selectedItemColor: StyleColor.teal,
       unselectedItemColor: StyleColor.black,
     ),
   );
