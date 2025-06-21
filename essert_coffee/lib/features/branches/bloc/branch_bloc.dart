@@ -80,6 +80,7 @@ class BranchBloc extends Bloc<BranchEvent, BranchState> {
           ) /
           1000;
       emit(SuccessState());
+      // Check if both distances are greater than 30 km
       if (distanceToBranch1! > 30 && distanceToBranch2! > 30) {
         emit(
           ErrorState("Sorry, there is no branch near your current location."),
