@@ -32,7 +32,7 @@ class MoreScreenBloc extends Bloc<MoreScreenEvent, MoreScreenState> {
   // User profile data variables.
   String firstName = "";
   String lastName = "";
-  String gender = "";
+ 
   String userId = "";
   int country = 1;
   AuthService authService = AuthService();
@@ -89,7 +89,7 @@ class MoreScreenBloc extends Bloc<MoreScreenEvent, MoreScreenState> {
       //delete user data
       firstName = "";
       lastName = "";
-      gender = "";
+     
       firstNameController.text = "";
       lasttNameController.text = "";
       emailtNameController.text = "";

@@ -96,45 +96,13 @@ class EditProfileScreen extends StatelessWidget {
                         ),
                       ),
                       StyleSize.sizeH16,
-                      Text("Gender", style: StyleText.bold20),
-                      Row(
-                        children: [
-                          RadiotProfile(
-                            gender: "Male",
-                            value: 'male',
-                            groupValue: bloc.gender,
-                            onChanged: (val) {
-                              if (val != null) {
-                                bloc.add(ChooseGenderEvent(gender: val));
-                              }
-                            },
-                          ),
-                          RadiotProfile(
-                            gender: "Female",
-                            value: 'female',
-                            groupValue: bloc.gender,
-                            onChanged: (val) {
-                              if (val != null) {
-                                bloc.add(ChooseGenderEvent(gender: val));
-                              }
-                            },
-                          ),
-                        ],
-                      ),
+                     
                       SizedBox(height: 100),
                       ButtomWidget(
                         textElevatedButton: "continue",
     
                         onTab:
-                            //حق بشرى
-                            // if (bloc.formKey.currentState!.validate()) {
-                            //   Navigator.pushReplacement(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //       builder: (context) => ProfileScreen(),
-                            //     ),
-                            //   );
-                            // }
+                          
                             () async {
                               if (bloc.formKey.currentState!.validate()) {
                                 //to update the database
@@ -147,7 +115,7 @@ class EditProfileScreen extends StatelessWidget {
                                     lastName: bloc.lasttNameController.text,
                                     email: bloc.emailtNameController.text,
                                     phone: bloc.phoneNameController.text,
-                                    gender: bloc.gender,
+                                    
                                   );
                                   //snack bar with message if the profile has been updated successfully
     
