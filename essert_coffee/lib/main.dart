@@ -15,12 +15,12 @@ void main() async {
   await Supabase.initialize(
     url: const String.fromEnvironment(
       'SUPABASE_URL',
-      defaultValue: 'https://qrvjtilvfzjfnoacxsrh.supabase.co',
+      defaultValue: '',
     ),
     anonKey: const String.fromEnvironment(
       'SUPABASE_ANNON_KEY',
       defaultValue:
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFydmp0aWx2ZnpqZm5vYWN4c3JoIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MDQ5MzM2NywiZXhwIjoyMDY2MDY5MzY3fQ.e4xPHpvG2o_48IqZpkkUdOR_QiJ-bBeam-IR-l8uoC0',
+          '',
     ),
   );
   setupServiceLocator();
