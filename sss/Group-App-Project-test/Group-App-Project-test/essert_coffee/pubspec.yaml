@@ -1,0 +1,35 @@
+name: essert_coffee
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  bloc: ^9.0.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  flutter_dotenv: ^5.2.1
+  geolocator: ^14.0.1
+  get_it: ^8.0.3
+  google_maps_flutter: ^2.12.3
+  meta: ^1.16.0
+  moyasar: ^2.0.19
+  supabase_flutter: ^2.9.1
+  firebase_core: ^3.14.0
+  onesignal_flutter: ^5.3.3
+  http: ^1.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets: 
+    - assets/images/
+    - .env
