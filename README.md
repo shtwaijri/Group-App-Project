@@ -83,6 +83,15 @@ Users have access to a profile section where they can update personal informatio
 ## Screenshots of your app.
 ![image](https://github.com/user-attachments/assets/f8b18539-e342-48fa-9333-619be205e242)
 ![image](https://github.com/user-attachments/assets/6fc02207-6303-4c73-9a12-830c4f113b8a)
+![image](https://github.com/user-attachments/assets/7769c184-053f-4105-a7d9-2e18ba296d1f)
+![image](https://github.com/user-attachments/assets/f4d4adb0-5047-4b10-b74b-fce595d7cfed)
+![image](https://github.com/user-attachments/assets/d8c9b880-dbb0-49d9-b56e-b6db03832d20)
+![image](https://github.com/user-attachments/assets/15e2527a-6a95-4c80-9fd2-402c05ec1704)
+![image](https://github.com/user-attachments/assets/109dfdb9-1bca-4c6b-a552-5b191372cf1e)
+![image](https://github.com/user-attachments/assets/886d1545-42e5-46e4-956d-b28095985611)
+https://github.com/user-attachments/assets/117e800d-4174-4ff8-bc4e-8f81e7dc6ef5
+
+
 
 
 ## 👥 Team Members
