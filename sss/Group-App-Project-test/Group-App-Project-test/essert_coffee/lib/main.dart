@@ -6,6 +6,7 @@ import 'package:essert_coffee/utilities/helper/cart_services.dart';
 import 'package:essert_coffee/utilities/setup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get_it/get_it.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -14,17 +15,7 @@ void main() async {
   await setUp();
 
   WidgetsFlutterBinding.ensureInitialized();
-  await Supabase.initialize(
-    url: const String.fromEnvironment(
-      'SUPABASE_URL',
-      defaultValue: 'https://qrvjtilvfzjfnoacxsrh.supabase.co',
-    ),
-    anonKey: const String.fromEnvironment(
-      'SUPABASE_ANNON_KEY',
-      defaultValue:
-         'SUPABASE_ANNON_KEY',
-    ),
-  );
+
   setupServiceLocator();
 
   GetIt.I.registerSingleton<CartService>(CartService());

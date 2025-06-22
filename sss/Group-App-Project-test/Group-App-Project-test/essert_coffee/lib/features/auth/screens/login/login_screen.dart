@@ -3,6 +3,7 @@
 import 'package:essert_coffee/features/auth/auth_service.dart';
 import 'package:essert_coffee/features/auth/screens/login/bloc/login_bloc.dart';
 import 'package:essert_coffee/features/auth/screens/signup/signup_screen.dart';
+import 'package:essert_coffee/features/branches/screens/branches_screen.dart';
 import 'package:essert_coffee/features/nav/navigation_bar_screen.dart';
 import 'package:essert_coffee/style/style_color.dart';
 import 'package:flutter/gestures.dart';
@@ -144,7 +145,7 @@ class LoginScreen extends StatelessWidget {
                               Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => NavigationBarScreen(),
+                                  builder: (context) => BranchesScreen(),
                                 ),
                               );
                             }

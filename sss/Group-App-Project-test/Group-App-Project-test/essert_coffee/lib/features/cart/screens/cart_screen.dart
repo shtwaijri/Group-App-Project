@@ -23,85 +23,95 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => CartBloc(GetIt.I<CartService>())..add(LoadCart()),
-      child: Scaffold(
-        appBar: AppBar(title: const Text('Cart Page')),
-        body: Padding(
-          padding: const EdgeInsets.all(8),
-          child: Column(
-            children: [
-              Expanded(
-                child: BlocBuilder<CartBloc, CartState>(
-                  // i put bloc builder on listview.builder becouse stat.items.length will be error
-                  buildWhen: (prev, curr) => curr is CartLoaded,
-                  builder: (context, state) {
-                    if (state is CartLoaded) {
-                      return ListView.builder(
-                        itemCount: state.items.length,
-                        itemBuilder: (context, index) {
-                          final item = state.items[index];
-                          return Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: CustumOrder(
-                              img: Image.network(item.imageUrl!),
-                              title: item.type!,
-                              price: item.price!,
-                              quantity: item.quantity,
-                              increaseQuantity: () {
-                                GetIt.I<CartService>().increaseQuantity(
-                                  item.id as String,
-                                );
-                                context.read<CartBloc>().add(LoadCart());
-                              },
-                              decreaseQuantity: () {
-                                GetIt.I<CartService>().decreaseQuantity(
-                                  item.id as String,
-                                );
-                                context.read<CartBloc>().add(LoadCart());
-                              },
-                              removeItem: () {
-                                GetIt.I<CartService>().removeItem(
-                                  item.id as String,
-                                );
-                                context.read<CartBloc>().add(LoadCart());
-                              },
-                            ),
+      child: Builder(
+        builder: (context) {
+          final bloc=context.read<CartBloc>();
+          return Scaffold(
+            
+            appBar: AppBar(title: const Text('Cart Page')),
+            body: Padding(
+              padding: const EdgeInsets.all(8),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: BlocBuilder<CartBloc, CartState>(
+                      // i put bloc builder on listview.builder becouse stat.items.length will be error
+                      buildWhen: (prev, curr) => curr is CartLoaded,
+                      builder: (context, state) {
+                        if (state is CartLoaded) {
+                          return ListView.builder(
+                            itemCount: state.items.length,
+                            itemBuilder: (context, index) {
+                              final item = state.items[index];
+                              return Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: CustumOrder(
+                                  img: Image.network(item.imageUrl!),
+                                  title: item.type!,
+                                  price: item.price!,
+                                  quantity: item.quantity,
+                                  increaseQuantity: () {
+                                    GetIt.I<CartService>().increaseQuantity(
+                                      item.id as String,
+                                    );
+                                    bloc.add(LoadCart());
+                                  },
+                                  decreaseQuantity: () {
+                                    GetIt.I<CartService>().decreaseQuantity(
+                                      item.id as String,
+                                    );
+                                    bloc.add(LoadCart());
+                                  },
+                                  removeItem: () {
+                                    GetIt.I<CartService>().removeItem(
+                                      item.id as String,
+                                    );
+                                    bloc.add(LoadCart());
+                                  },
+                                ),
+                              );
+                            },
                           );
-                        },
-                      );
-                    }
-                    return const Center(child: CircularProgressIndicator());
-                  },
-                ),
-              ),
-
-              const SizedBox(height: 16),
-
-              BlocBuilder<CartBloc, CartState>(
-                buildWhen: (prev, curr) => curr is CartLoaded,
-                builder: (context, state) {
-                  if (state is CartLoaded) {
-                    final total = calculateTotal(
-                      state.items,
-                    ).toStringAsFixed(2);
-                    context.read<CartBloc>().num=total as int;
-                    return ButtomWidget(
-                      textElevatedButton: 'Pay $total SAR',
-                      onTab: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const PaymentScreeen(),
-                          ),
-                        );
+                        }
+                        return const Center(child: CircularProgressIndicator());
                       },
-                    );
-                  }
-                  return SizedBox.shrink();
-                },
+                    ),
+                  ),
+          
+                  const SizedBox(height: 16),
+          
+                  BlocBuilder<CartBloc, CartState>(
+                    buildWhen: (prev, curr) => curr is CartLoaded,
+                    builder: (context, state) {
+                      if (state is CartLoaded) {
+                        final total = calculateTotal(state.items).round();
+                        bloc.num = total;
+                        return ButtomWidget(
+                          textElevatedButton: 'Pay $total SAR',
+          
+                          onTab: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return BlocProvider.value(
+                                    value: bloc,
+                                    child: PaymentScreeen(),
+                                  );
+                                },
+                              ),
+                            );
+                          },
+                        );
+                      }
+                      return SizedBox.shrink();
+                    },
+                  ),
+                ],
               ),
-            ],
-          ),
-        ),
+            ),
+          );
+        }
       ),
     );
   }

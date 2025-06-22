@@ -9,9 +9,8 @@ part 'cart_state.dart';
 
 class CartBloc extends Bloc<CartEvent, CartState> {
   
-
   late int num = 2000;
-  int total=0;
+
   final branchGetIt = GetIt.I.get<BranchData>();
   final CartService cartService;
   CartBloc(this.cartService) : super(CartInitial()) {

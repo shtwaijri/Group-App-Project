@@ -11,7 +11,7 @@ import 'package:http/http.dart' as http;
 /// This function constructs an HTTP POST request to the OneSignal /notifications endpoint.
 ///
 /// Parameters:
-/// - `externalUserId`: A [List<String>] containing the external IDs of the users
+/// - `externalUserIdz`: A [List<String>] containing the external IDs of the users
 ///   who should receive the notification. Typically, this list contains one ID
 ///   for a specific user.
 /// - `title`: The title of the push notification that will be displayed to the user.

@@ -97,31 +97,31 @@ class EditProfileScreen extends StatelessWidget {
                         ),
                       ),
                       StyleSize.sizeH16,
-                      Text("Gender", style: StyleText.bold20),
-                      Row(
-                        children: [
-                          RadiotProfile(
-                            gender: "Male",
-                            value: 'male',
-                            groupValue: bloc.gender,
-                            onChanged: (val) {
-                              if (val != null) {
-                                bloc.add(ChooseGenderEvent(gender: val));
-                              }
-                            },
-                          ),
-                          RadiotProfile(
-                            gender: "Female",
-                            value: 'female',
-                            groupValue: bloc.gender,
-                            onChanged: (val) {
-                              if (val != null) {
-                                bloc.add(ChooseGenderEvent(gender: val));
-                              }
-                            },
-                          ),
-                        ],
-                      ),
+                      // Text("Gender", style: StyleText.bold20),
+                      // Row(
+                      //   children: [
+                      //     RadiotProfile(
+                      //       gender: "Male",
+                      //       value: 'male',
+                      //       groupValue: bloc.gender,
+                      //       onChanged: (val) {
+                      //         if (val != null) {
+                      //           bloc.add(ChooseGenderEvent(gender: val));
+                      //         }
+                      //       },
+                      //     ),
+                      //     RadiotProfile(
+                      //       gender: "Female",
+                      //       value: 'female',
+                      //       groupValue: bloc.gender,
+                      //       onChanged: (val) {
+                      //         if (val != null) {
+                      //           bloc.add(ChooseGenderEvent(gender: val));
+                      //         }
+                      //       },
+                      //     ),
+                      //   ],
+                      // ),
                       SizedBox(height: 100),
                       ButtomWidget(
                         textElevatedButton: "continue",

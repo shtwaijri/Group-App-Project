@@ -24,7 +24,7 @@ class BranchBloc extends Bloc<BranchEvent, BranchState> {
   LatLng? currentLocation;
 
   /// ID of the selected branch marker on the map.
-  String? selectedMarkerId;
+  String? selectedMarkerId = "1";
 
   /// Distance from user to Branch 1 in kilometers.
   double? distanceToBranch1;
