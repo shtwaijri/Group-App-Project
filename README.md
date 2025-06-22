@@ -89,6 +89,8 @@ Users have access to a profile section where they can update personal informatio
 ![image](https://github.com/user-attachments/assets/15e2527a-6a95-4c80-9fd2-402c05ec1704)
 ![image](https://github.com/user-attachments/assets/109dfdb9-1bca-4c6b-a552-5b191372cf1e)
 ![image](https://github.com/user-attachments/assets/886d1545-42e5-46e4-956d-b28095985611)
+![image](https://github.com/user-attachments/assets/35ee882e-f493-4613-8d64-77fdc92fc018)
+
 https://github.com/user-attachments/assets/117e800d-4174-4ff8-bc4e-8f81e7dc6ef5
 
 
