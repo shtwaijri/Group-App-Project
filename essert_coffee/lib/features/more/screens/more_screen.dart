@@ -111,6 +111,10 @@ class MoreScreen extends StatelessWidget {
                     title: "Delete my account",
                     onPressed: () async {
                       bloc.add(DeleteUerEvent());
+                       Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()),
+                      );
                     },
                   ),
                 ],
