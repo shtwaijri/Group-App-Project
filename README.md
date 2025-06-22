@@ -1,63 +1,93 @@
-# 📱 Group App Development Project
+# essert_coffee
 
-Welcome to the Group App Development Project!  
-This assignment challenges your team to collaborate on designing and developing a fully functional app that incorporates core features and essential concepts. You will apply what you've learned in class to create an application that includes the following functionalities:
-
----
-
-## 🎯 Core Functionality
-
-- **Log in**
-- **Sign Up**
-- **CRUD Operations:**
-  - **Create** – Add new items to your app.
-  - **Read** – Retrieve and display data.
-  - **Update** – Edit existing items.
-  - **Delete** – Remove items from your app.
+## Description of the project.
+The mobile app for **Essert Coffee** offers a user-friendly digital ordering experience, allowing users to place orders in advance and pick them up at their preferred branch.
 
 ---
 
-## 🔧 Concepts to Implement
+## ⚙️ Setup Instructions
 
-- **GetIt** – For dependency injection.
-- **BLoC** – Use BLoC for state management.
-- **Notifications**
-- **Google Map Integration**
-- **Supabase** – Backend services.
+Follow the steps below to set up the project on your local development environment.
 
----
+### ✅ Prerequisites
 
-## 🌟 UI Requirements
+- Flutter SDK (>= 3.0.0)
+- Android Studio & VS Code
+- Xcode (for iOS builds)
+- Git
+- Firebase project 
 
-- Your app must include at least **10 user interfaces (UIs).**
+ 
+## 🛠️ Technologies Used
 
----
-
-## 📅 Deadline
-
-- **Submission deadline:** June 22, 9:59 AM.
-- Each team must submit one pull request by the team lead, including the team name.
-
----
-
-## 💻 GitHub Submission Guidelines
-
-- Ensure your pull request includes a well-structured `README.md` file.
-- The README should include:
-  - Description of the project.
-  - Setup instructions.
-  - Team members.
-  - Explanation of the key functionalities implemented.
-  - Screenshots of your app.
+- Flutter (cross-platform mobile development)  
+- Firebase (authentication, database, notifications)  
+- Google Maps API (for location services)  
+- REST APIs (for backend communication)
 
 ---
 
-## 🌟 Final Motivation
+## ⚙️ Setup Instructions
 
-> **Remember: Teamwork makes the dream work!**
->
-> Stay focused, collaborate effectively, and give it your best shot.  
-> Together, you can create something amazing! 🚀
+### 1. Clone the Repository
+
+Clone the repository from GitHub and navigate into the project folder:
+
+git clone  https://github.com/shtwaijri/Group-App-Project.git
+cd essert_coffee
+
+### 2. Open in Visual Studio Code
+
+Open the folder in **VS Code** (or your preferred IDE).
+
+### 3. Install Dependencies
+
+In the terminal, run:
+
+flutter pub get
+
+### 4. Run the App
+
+To launch the app on a connected device or emulator, run:
+
+flutter run
 
 ---
 
+##  Key Functionalities Implemented
+
+### 🔐 User Authentication  
+Users can register or log in using secure authentication methods. This enables personalized access, order history, and a consistent experience across devices.
+
+
+### 📋 Menu Browsing  
+A visually rich and organized digital menu allows users to explore all available drinks and snacks. Items are categorized for quick access, and each product supports customization options
+
+### 🛒 Order Placement & Customization  
+Users can:  
+- Add items to a cart  
+- Customize them before checkout  
+- Select their preferred pickup branch  
+
+### 💳 In-App Payment  
+Secure payment integration ensures fast checkout using credit/debit cards or other supported payment methods.  
+
+### 🏪 Pickup from Store  
+After placing an order, the user receives a confirmation and heads to the selected Essert Coffee branch. The in-store team prepares the order for a quick and seamless handoff — no need to wait in line.
+
+### 🗺️ Store Locator  
+The app uses location services to detect nearby branches and allows users to select a convenient pickup location based on real-time distance and hours.
+### 👤 User Profile  
+Users have access to a profile section where they can update personal information such as name, contact details, and preferences. This helps personalize the app experience and streamline order placement.
+
+## Screenshots of your app.
+![image](https://github.com/user-attachments/assets/f8b18539-e342-48fa-9333-619be205e242)
+![image](https://github.com/user-attachments/assets/6fc02207-6303-4c73-9a12-830c4f113b8a)
+
+
+## 👥 Team Members
+
+- Shatha Altwaijri  
+- Lamya Alsuhaibani  
+- Bushra Aljuwair  
+- Amr Noorwali
