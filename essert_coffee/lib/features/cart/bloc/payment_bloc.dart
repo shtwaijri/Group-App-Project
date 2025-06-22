@@ -15,13 +15,13 @@ part 'payment_state.dart';
 /// - [ErrorState] if the amount format is invalid.
 class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
   String amount = ' 100';
-  late int num = 1;
+  late int num = 2000;
   final branchGetIt = GetIt.I.get<BranchData>();
   PaymentBloc() : super(PaymentInitial()) {
     on<AmountEvent>((event, emit) {
       try {
-        final double changeToDouble = double.parse(amount);
-        num = (changeToDouble * 100).toInt();
+        num = num * 100;
+        print('NUM IS: $num');
         emit(SuccessState());
       } catch (e) {
         emit(ErrorState('Invalid amount format'));

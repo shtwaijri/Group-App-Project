@@ -1,5 +1,6 @@
 import 'package:essert_coffee/features/branches/bloc/branch_bloc.dart';
 import 'package:essert_coffee/features/branches/widgets/branch_detail_widget.dart';
+import 'package:essert_coffee/features/cart/screens/payment_screeen.dart';
 import 'package:essert_coffee/models/branch_model.dart';
 import 'package:essert_coffee/style/style_text.dart';
 import 'package:essert_coffee/widgets/branch_widget.dart';
@@ -129,7 +130,17 @@ class BranchesScreen extends StatelessWidget {
                         },
                       ),
                       StyleSize.sizeH8,
-                      ButtomWidget(onTab: () {}, textElevatedButton: 'Next'),
+                      ButtomWidget(
+                        onTab: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PaymentScreeen(),
+                            ),
+                          );
+                        },
+                        textElevatedButton: 'Next',
+                      ),
                     ],
                   ),
                 ),

@@ -20,6 +20,7 @@ class PaymentScreeen extends StatelessWidget {
       child: Builder(
         builder: (context) {
           final bloc = context.read<PaymentBloc>();
+          bloc.add(AmountEvent());
           return Scaffold(
             body: SafeArea(
               child: Center(
@@ -33,26 +34,30 @@ class PaymentScreeen extends StatelessWidget {
 
                       BlocBuilder<PaymentBloc, PaymentState>(
                         builder: (context, state) {
-                          return CreditCard(
-                            config: paymentConfig(bloc.num),
-                            onPaymentResult: (PaymentResponse value) async {
-                              // Callback when payment result is received.
-                              if (value.status == PaymentStatus.paid) {
-                                print("SuccessState");
-                              } else if (value.status == PaymentStatus.failed) {
-                                // Show snackbar on payment failure.
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                      'Payment failed. Please try again.',
-                                      style: StyleText.regular16Error,
+                          if (state is SuccessState) {
+                            return CreditCard(
+                              config: paymentConfig(bloc.num),
+                              onPaymentResult: (PaymentResponse value) async {
+                                // Callback when payment result is received.
+                                if (value.status == PaymentStatus.paid) {
+                                  print("SuccessState");
+                                } else if (value.status ==
+                                    PaymentStatus.failed) {
+                                  // Show snackbar on payment failure.
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        'Payment failed. Please try again.',
+                                        style: StyleText.regular16Error,
+                                      ),
+                                      backgroundColor: StyleColor.white,
                                     ),
-                                    backgroundColor: StyleColor.white,
-                                  ),
-                                );
-                              }
-                            },
-                          );
+                                  );
+                                }
+                              },
+                            );
+                          }
+                          return Text("notheng");
                         },
                       ),
                     ],
