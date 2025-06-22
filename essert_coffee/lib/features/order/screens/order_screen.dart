@@ -7,7 +7,9 @@ class OrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('Order screen', style: StyleText.bold16)),
+      body: Center(
+        child: Text('You have no order yet', style: StyleText.bold16),
+      ),
     );
   }
 }
