@@ -1,7 +1,9 @@
 # essert_coffee
+mobile app for **Essert Coffee** that is offers a user-friendly digital ordering experience, allowing users to place orders in advance and pick them up at their preferred branch.
 
-## Description of the project.
-The mobile app for **Essert Coffee** offers a user-friendly digital ordering experience, allowing users to place orders in advance and pick them up at their preferred branch.
+
+https://github.com/user-attachments/assets/117e800d-4174-4ff8-bc4e-8f81e7dc6ef5
+
 
 ---
 
@@ -79,23 +81,6 @@ After placing an order, the user receives a confirmation and heads to the select
 The app uses location services to detect nearby branches and allows users to select a convenient pickup location based on real-time distance and hours.
 ### 👤 User Profile  
 Users have access to a profile section where they can update personal information such as name, contact details, and preferences. This helps personalize the app experience and streamline order placement.
-
-## Screenshots of your app.
-![image](https://github.com/user-attachments/assets/f8b18539-e342-48fa-9333-619be205e242)
-![image](https://github.com/user-attachments/assets/6fc02207-6303-4c73-9a12-830c4f113b8a)
-![image](https://github.com/user-attachments/assets/7769c184-053f-4105-a7d9-2e18ba296d1f)
-![image](https://github.com/user-attachments/assets/f4d4adb0-5047-4b10-b74b-fce595d7cfed)
-![image](https://github.com/user-attachments/assets/d8c9b880-dbb0-49d9-b56e-b6db03832d20)
-![image](https://github.com/user-attachments/assets/15e2527a-6a95-4c80-9fd2-402c05ec1704)
-![image](https://github.com/user-attachments/assets/109dfdb9-1bca-4c6b-a552-5b191372cf1e)
-![image](https://github.com/user-attachments/assets/886d1545-42e5-46e4-956d-b28095985611)
-![image](https://github.com/user-attachments/assets/35ee882e-f493-4613-8d64-77fdc92fc018)
-<img src="https://github.com/user-attachments/assets/26d37247-fc58-4914-b3ea-7dd307077418" alt="output" width="300" >
-<img src="https://github.com/user-attachments/assets/1072d42c-71c4-438b-8fc1-69b6d75f5715" alt="output" width="300" >
-
-https://github.com/user-attachments/assets/117e800d-4174-4ff8-bc4e-8f81e7dc6ef5
-
-
 
 
 ## 👥 Team Members
